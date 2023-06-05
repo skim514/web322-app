@@ -4,9 +4,9 @@
 * No part of this assignment has been copied manually or electronically from any other source
 * (including web sites) or distributed to other students.
 *
-* Name: Suna Kim        Student ID: 104690227      Date: May 31th, 2023
+* Name: Suna Kim        Student ID: 104690227      Date: June 1st, 2023
 *
-* Cyclic Web App URL: 
+* Cyclic Web App URL: https://shy-blue-dalmatian-wrap.cyclic.app
 *
 * GitHub Repository URL: https://github.com/skim514/web322-app
 *
