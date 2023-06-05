@@ -6,7 +6,7 @@
 *
 * Name: Suna Kim        Student ID: 104690227      Date: May 31th, 2023
 *
-* Cyclic Web App URL: https://jolly-bull-jumpsuit.cyclic.app
+* Cyclic Web App URL: 
 *
 * GitHub Repository URL: https://github.com/skim514/web322-app
 *
@@ -63,3 +63,6 @@ app.get("/", function(req,res){
         res.send("ERROR!"+ err)
     })
 });
+
+// setup http server to listen on HTTP_PORT
+app.listen(HTTP_PORT, onHttpStart);
