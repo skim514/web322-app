@@ -62,7 +62,13 @@ module.exports.addPost = function(postData) {
                 postData.published = true;
             }
             postData.id = posts.length+1;
+
             postData.postDate = new Date().toLocaleDateString('fr-CA');
+            // const year = postData.postData.getFullYear();
+            // const month = postData.postData.getMonth();
+            // const day = postData.postData.getDay();
+            // postData.postData = `${year}-${month}-${day}`;
+            
             posts.push(postData);
             resolve();
     })
@@ -94,7 +100,18 @@ module.exports.getPostsById = function(id) {
     return new Promise((resolve, reject) => {
         filteredID = posts.filter(post => post.id == id);
         if(filteredID.length > 0){
-            resolve(filteredID);
+            resolve(filteredID[0]);
+        }else{
+            reject("No result returned!");
+        }
+    });
+};
+
+module.exports.getPublishedPostsByCategory = function(category) {
+    return new Promise((resolve, reject) => {
+        filteredCategories = posts.filter(post => post.published == true && post.category == category);
+        if(filteredCategories.length > 0){
+            resolve(filteredCategories);
         }else{
             reject("No result returned!");
         }
